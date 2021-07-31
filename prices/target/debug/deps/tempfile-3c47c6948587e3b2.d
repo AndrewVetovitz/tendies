@@ -1,0 +1,12 @@
+c:\Users\Andrew\Desktop\workspace\tendies\prices\target\debug\deps\tempfile-3c47c6948587e3b2.rmeta: C:\Users\Andrew\.cargo\registry\src\github.com-1ecc6299db9ec823\tempfile-3.2.0\src\lib.rs C:\Users\Andrew\.cargo\registry\src\github.com-1ecc6299db9ec823\tempfile-3.2.0\src\dir.rs C:\Users\Andrew\.cargo\registry\src\github.com-1ecc6299db9ec823\tempfile-3.2.0\src\error.rs C:\Users\Andrew\.cargo\registry\src\github.com-1ecc6299db9ec823\tempfile-3.2.0\src\file\mod.rs C:\Users\Andrew\.cargo\registry\src\github.com-1ecc6299db9ec823\tempfile-3.2.0\src\file\imp\mod.rs C:\Users\Andrew\.cargo\registry\src\github.com-1ecc6299db9ec823\tempfile-3.2.0\src\spooled.rs C:\Users\Andrew\.cargo\registry\src\github.com-1ecc6299db9ec823\tempfile-3.2.0\src\util.rs C:\Users\Andrew\.cargo\registry\src\github.com-1ecc6299db9ec823\tempfile-3.2.0\src\file\imp\windows.rs
+
+c:\Users\Andrew\Desktop\workspace\tendies\prices\target\debug\deps\tempfile-3c47c6948587e3b2.d: C:\Users\Andrew\.cargo\registry\src\github.com-1ecc6299db9ec823\tempfile-3.2.0\src\lib.rs C:\Users\Andrew\.cargo\registry\src\github.com-1ecc6299db9ec823\tempfile-3.2.0\src\dir.rs C:\Users\Andrew\.cargo\registry\src\github.com-1ecc6299db9ec823\tempfile-3.2.0\src\error.rs C:\Users\Andrew\.cargo\registry\src\github.com-1ecc6299db9ec823\tempfile-3.2.0\src\file\mod.rs C:\Users\Andrew\.cargo\registry\src\github.com-1ecc6299db9ec823\tempfile-3.2.0\src\file\imp\mod.rs C:\Users\Andrew\.cargo\registry\src\github.com-1ecc6299db9ec823\tempfile-3.2.0\src\spooled.rs C:\Users\Andrew\.cargo\registry\src\github.com-1ecc6299db9ec823\tempfile-3.2.0\src\util.rs C:\Users\Andrew\.cargo\registry\src\github.com-1ecc6299db9ec823\tempfile-3.2.0\src\file\imp\windows.rs
+
+C:\Users\Andrew\.cargo\registry\src\github.com-1ecc6299db9ec823\tempfile-3.2.0\src\lib.rs:
+C:\Users\Andrew\.cargo\registry\src\github.com-1ecc6299db9ec823\tempfile-3.2.0\src\dir.rs:
+C:\Users\Andrew\.cargo\registry\src\github.com-1ecc6299db9ec823\tempfile-3.2.0\src\error.rs:
+C:\Users\Andrew\.cargo\registry\src\github.com-1ecc6299db9ec823\tempfile-3.2.0\src\file\mod.rs:
+C:\Users\Andrew\.cargo\registry\src\github.com-1ecc6299db9ec823\tempfile-3.2.0\src\file\imp\mod.rs:
+C:\Users\Andrew\.cargo\registry\src\github.com-1ecc6299db9ec823\tempfile-3.2.0\src\spooled.rs:
+C:\Users\Andrew\.cargo\registry\src\github.com-1ecc6299db9ec823\tempfile-3.2.0\src\util.rs:
+C:\Users\Andrew\.cargo\registry\src\github.com-1ecc6299db9ec823\tempfile-3.2.0\src\file\imp\windows.rs:
