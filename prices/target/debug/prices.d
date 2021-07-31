@@ -1,1 +1,0 @@
-/mnt/c/Users/Andrew/Desktop/workspace/tendies/prices/target/debug/prices: /mnt/c/Users/Andrew/Desktop/workspace/tendies/prices/src/main.rs /mnt/c/Users/Andrew/Desktop/workspace/tendies/prices/src/request.rs
