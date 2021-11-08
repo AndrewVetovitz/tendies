@@ -1,6 +1,7 @@
-use crate::request;
+mod request;
+pub mod models;
 
 fn main() {
-    let res =  request::rest_call::test_call();
+    let res =  request::test_call::test_call();
     println!("Hello, world!");
 }
