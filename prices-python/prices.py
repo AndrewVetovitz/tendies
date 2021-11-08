@@ -6,22 +6,24 @@ import calculations
 covertColumns = ['Open', 'High', 'Close', 'Low']
 
 plot = plotdata.plot
-transformPercentageChange = calculations.calculatePercentChange
-transformInvestOnColumnChange = calculations.calculateInvestmentAggreatePercentage
+returns = calculations.returns
+drawdown = calculations.drawdown
+cagr = calculations.cagr
 
 # msft = yf.Ticker("MSFT")
 spy = yf.Ticker("SPY")
 upro = yf.Ticker("UPRO")
 
-print(upro.actions)
+spyData = spy.history(period="max")
+spyData.attrs['Ticker'] = 'SPY'
+
+uproData = upro.history(period="max")
+uproData.attrs['Ticker'] = 'UPRO'
 
 # get historical market data
-df = spy.history(period="max")
-dfu = upro.history(period="max")
-
 dataFrames = [
-    df, 
-    dfu
+    spyData, 
+    uproData
 ]
 
 for i in range(len(dataFrames)):
@@ -30,12 +32,17 @@ for i in range(len(dataFrames)):
     #Converting the datatype to float
     for j in covertColumns:
         dataFrames[i][j] = dataFrames[i][j].astype('float64')
-    
-    transformPercentageChange(dataFrames[i], 'Close', 'PercentChange')
 
-    dataFrames[i]['Cumulative Returns'] = 10000 * (dataFrames[i]['PercentChange'] + 1).cumprod()
-    dataFrames[i]['Cumulative Returns'][0] = 10000
-    print(dataFrames[i].head())
+    dataFrames[i] = dataFrames[i].set_index('Date')
+
+    # dataFrames[i]['Cumulative Returns'] = returns(dataFrames[i]['Close'])
+    dd = drawdown(dataFrames[i]['Close'])
+    cag = cagr(dataFrames[i]['Close'])
+
+    print(dataFrames[i].attrs['Ticker'])
+    print(f"Draw Down: {dd.min():.2f}%")
+    print(f"CAGR: {cag:.2f}%")
+    print()
 
 frames = [
     # [dataFrames[0], 'Date', 'Close'], 
@@ -44,54 +51,4 @@ frames = [
     [dataFrames[1], 'Date', 'Cumulative Returns']
 ]
 
-plot(frames)
-
-# show actions (dividends, splits)
-# msft.actions
-
-# # show dividends
-# msft.dividends
-
-# # show splits
-# msft.splits
-
-# # show financials
-# msft.financials
-# msft.quarterly_financials
-
-# # show major holders
-# msft.major_holders
-
-# # show institutional holders
-# msft.institutional_holders
-
-# # show balance sheet
-# msft.balance_sheet
-# msft.quarterly_balance_sheet
-
-# # show cashflow
-# msft.cashflow
-# msft.quarterly_cashflow
-
-# # show earnings
-# msft.earnings
-# msft.quarterly_earnings
-
-# # show sustainability
-# msft.sustainability
-
-# # show analysts recommendations
-# msft.recommendations
-
-# # show next event (earnings, etc)
-# msft.calendar
-
-# # show ISIN code - *experimental*
-# # ISIN = International Securities Identification Number
-# msft.isin
-
-# # show options expirations
-# msft.options
-
-# # show news
-# msft.news
+# plot(frames)

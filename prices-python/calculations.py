@@ -1,12 +1,19 @@
-from functools import reduce
+def returns(prices):
+    """
+    Calulates the growth of 1 dollar invested in a stock with given prices
+    """
+    return (1 + prices.pct_change(1)).cumprod()
 
-def calculatePercentChange(df, changeColumn, newColumnName = 'PercentChange'):
-    df[newColumnName] = df[changeColumn].pct_change(1)
+def drawdown(prices):
+    """
+    Calulates the drawdown of a stock with given prices
+    """
+    rets = returns(prices)
+    return (rets.div(rets.cummax()) - 1) * 100
 
-def calculateInvestmentAggreatePercentage(df, percentChangeColumn, newColumnName = 'AggregatePercentageChange'):
-    df.loc[0, newColumnName] = df.loc[0, percentChangeColumn]
-    # Then iterate through the remaining rows and fill the calculated values:
-
-    for i in range(1, len(df)):
-        df.loc[i, newColumnName] = df.loc[i, percentChangeColumn] + df.loc[i - 1, newColumnName]
-
+def cagr(prices):
+    """
+    Calculates the Compound Annual Growth Rate (CAGR) of a stock with given prices
+    """
+    delta = (prices.index[-1] - prices.index[0]).days / 365.25
+    return ((prices[-1] / prices[0]) ** (1 / delta) - 1) * 100
